@@ -1,3 +1,4 @@
+/// <reference types="react" />
 export type MetaInfoProps = {
     data: Record<string, any>;
     fields: {

@@ -1,3 +1,4 @@
+/// <reference types="react" />
 export type FooterConfig = {
     site: {
         startYear?: number;

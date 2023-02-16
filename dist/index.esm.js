@@ -15,7 +15,7 @@ function Footer(_a) {
         " All rights reserved."));
 }
 
-/******************************************************************************
+/*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
 Permission to use, copy, modify, and/or distribute this software for any

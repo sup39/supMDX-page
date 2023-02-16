@@ -47,6 +47,6 @@
     "react": "^18"
   },
   "dependencies": {
-    "@sup39/mdx-nav": "../supMDX-nav"
+    "@sup39/mdx-nav": "^0.1.0"
   }
 }

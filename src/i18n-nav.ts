@@ -3,7 +3,7 @@ import {I18N, translate} from './i18n';
 
 export type I18NNavEntryInfo = {
   label: I18N<string>
-  link: string
+  path: string
   children?: I18NNavEntryInfo[]
 };
 
@@ -13,7 +13,7 @@ export function translateNav(
 ): NavEntryInfo[] {
   return nav18.map(e => ({
     label: translate(e.label, localeInfo),
-    link: e.link,
+    path: e.path,
     ...(e.children ? {children: translateNav(e.children, localeInfo)} : {}),
   }));
 }

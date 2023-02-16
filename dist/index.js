@@ -17,7 +17,7 @@ function Footer(_a) {
         " All rights reserved."));
 }
 
-/*! *****************************************************************************
+/******************************************************************************
 Copyright (c) Microsoft Corporation.
 
 Permission to use, copy, modify, and/or distribute this software for any
@@ -94,8 +94,8 @@ function __rest(s, e) {
 }
 
 function NavEntry(_a) {
-    var _b = _a.entry, label = _b.label, link = _b.link, children = _b.children, dir = _a.dir, here = _a.here, childrenJSX = _a.children;
-    var href = dir + link;
+    var _b = _a.entry, label = _b.label, path = _b.path, children = _b.children, dir = _a.dir, here = _a.here, childrenJSX = _a.children;
+    var href = dir + path;
     var isHere = href.replace(/\/$/, '') === here; // remove trailing slash
     var isRHere = isHere || here.startsWith(href); // here or is children
     var _c = React.useState(isRHere), toggle = _c[0], setToggle = _c[1];
@@ -107,7 +107,7 @@ function NavEntry(_a) {
                 React.createElement("svg", { viewBox: "0 0 8 8", onClick: function () { return setToggle(function (e) { return !e; }); } },
                     React.createElement("polyline", { points: "6 3 4 5 2 3" }))),
             isHere ? childrenJSX : React.createElement(React.Fragment, null),
-            React.createElement("div", { className: 'nav-dir-child' }, children.map(function (entry) { return React.createElement(NavEntry, { key: entry.link, entry: entry, dir: href, here: here }, childrenJSX); })))) : React.createElement("div", { className: entryCls },
+            React.createElement("div", { className: 'nav-dir-child' }, children.map(function (entry) { return React.createElement(NavEntry, { key: entry.path, entry: entry, dir: href, here: here }, childrenJSX); })))) : React.createElement("div", { className: entryCls },
         React.createElement(Link, { href: href }, label));
 }
 
@@ -121,7 +121,7 @@ function NavBase(_a) {
     return React.createElement("nav", { className: className },
         children,
         React.createElement("div", { className: "nav-root" },
-            entries.map(function (entry) { return React.createElement(NavEntry, { key: entry.link, entry: entry, dir: '/', here: pathname }); }),
+            entries.map(function (entry) { return React.createElement(NavEntry, { key: entry.path, entry: entry, dir: '/', here: pathname }); }),
             headingsJSX));
 }
 
@@ -171,7 +171,7 @@ function translate(data, _a) {
 }
 
 function translateNav(nav18, localeInfo) {
-    return nav18.map(function (e) { return (__assign$1({ label: translate(e.label, localeInfo), link: e.link }, (e.children ? { children: translateNav(e.children, localeInfo) } : {}))); });
+    return nav18.map(function (e) { return (__assign$1({ label: translate(e.label, localeInfo), path: e.path }, (e.children ? { children: translateNav(e.children, localeInfo) } : {}))); });
 }
 
 function MDXPageBase(_a) {

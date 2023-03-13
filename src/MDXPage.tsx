@@ -13,7 +13,7 @@ type HeadingInfo = {
 };
 
 export type MDXProps = {
-  children: JSX.Element
+  children: React.ReactNode
   router: {pathname: string} & LocaleInfo
   meta: Partial<{
     title: I18N<string>

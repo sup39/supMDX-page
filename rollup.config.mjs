@@ -28,5 +28,5 @@ export default {
       exclude: 'node_modules/**',
     }),
   ],
-  external: ['react', 'react-dom', 'next/link', 'next/head'],
+  external: ['react', 'react-dom', 'next/head', '@sup39/mdx-nav'],
 };

@@ -1,6 +1,6 @@
 {
   "name": "@sup39/mdx-page",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "sup39 <dev@sup39.dev>",
   "repository": "github.com:sup39/supMDX-page",
   "description": "Page component for supMDX",
@@ -11,7 +11,7 @@
     "dist/*"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "rm -rf dist && rollup -c",
     "lint": "eslint --ext .ts --ext .tsx src/",
     "pre-commit:add": "git add -u"
   },
@@ -33,6 +33,7 @@
     "@sup39/eslint-config-typescript": "^0.1.5",
     "@types/react": "^18.0.28",
     "eslint": "^8.34.0",
+    "next": "^13",
     "pre-commit": "^1.2.2",
     "rollup": "^3.15.0",
     "typescript": "^4.9.5"
@@ -47,6 +48,6 @@
     "react": "^18"
   },
   "dependencies": {
-    "@sup39/mdx-nav": "^0.2.0"
+    "@sup39/mdx-nav": "^0.3.0"
   }
 }

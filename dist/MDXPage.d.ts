@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { NavHeaderConfig } from '@sup39/mdx-nav';
 import { I18N, LocaleInfo } from './i18n';
 import { I18NNavEntryInfo } from './i18n-nav';
@@ -8,7 +8,7 @@ type HeadingInfo = {
     id: string;
 };
 export type MDXProps = {
-    children: JSX.Element;
+    children: React.ReactNode;
     router: {
         pathname: string;
     } & LocaleInfo;

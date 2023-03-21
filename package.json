@@ -1,6 +1,6 @@
 {
   "name": "@sup39/mdx-page",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "sup39 <dev@sup39.dev>",
   "repository": "github.com:sup39/supMDX-page",
   "description": "Page component for supMDX",

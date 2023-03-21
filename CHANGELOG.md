@@ -1,4 +1,6 @@
 # ChangeLog
+## v0.3.1
+- Removes footer completely when config.author is null or empty
 ## v0.3.0
 - Uses `@sup39/mdx-nav` v0.3.0, which
   - changed `Link` (next/link) to `a`

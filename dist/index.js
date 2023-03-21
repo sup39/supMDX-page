@@ -9,12 +9,12 @@ function Footer(_a) {
     var year = new Date().getFullYear();
     var _b = config.site, _c = _b.startYear, year0 = _c === void 0 ? year : _c, author = _b.author;
     var yearStr = year > year0 ? "".concat(year0, "-").concat(year) : year;
-    return React.createElement("footer", null, author && React.createElement("div", null,
+    return author ? React.createElement("footer", null, React.createElement("div", null,
         "Copyright \u00A9 ",
         yearStr,
         " ",
         author,
-        " All rights reserved."));
+        " All rights reserved.")) : React.createElement(React.Fragment, null);
 }
 
 /******************************************************************************
